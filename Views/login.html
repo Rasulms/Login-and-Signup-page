@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/login.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Login Page</title>
+
+</head>
+
+<body class="body">
+    <div class="container-fluid">
+        <div class="login_Box">
+            <div class="heading">
+                <h4 style="width: 100%;text-transform: uppercase;color: #e60043;"> Welcome Back ! </h4>
+                <p>To keep connected with us, Please login with your credentials .</p>
+            </div>
+
+            <form action="" method="post" class="formBox">
+                <div class="user_box">
+                    <!-- <label for="email" class="label_block">Email id</label> -->
+                    <i class="fa-solid fa-user fa-xl label_block" style="color: #e60043;"></i>
+                    <input type="text" class="input_block" name="email" id="Email" placeholder="EMAIL ID">
+
+                </div>
+                <div class="user_box">
+                    <i class="fa-solid fa-lock fa-xl label_block " style="color: #e60043;"></i>
+                    <input type="password" class="input_block" name="password" id="pwd" placeholder="PASSWORD">
+                    <i id="show_hide" class="fa-solid fa-eye-low-vision  fa-lg" style="color: #075fb1;position: relative;
+                    right: 25px;bottom: 3px;"></i>
+
+                </div>
+                <div class="user_box_btn">
+                    <button type="=submit" class="btn login" id="loginBtn">
+                        LOGIN
+                    </button>
+                    <!-- <i class="fa-solid fa-eye fa-lg" style="color: #075fb1;"></i> -->
+                </div>
+
+
+                <!-- <h7 style="text-align: center;color: #e60043;font-weight: 500;"></h7> -->
+
+
+            </form>
+            <div class="user_box_btn" style="height: 7vh;
+                width: 100%;">
+                <span>New user ! Create an account by clicking <a href="./signup.html"
+                        style="color: #e60043 !important;">here</a>
+                </span>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+
+
+<script>
+    const pwd = document.getElementById('pwd')
+
+
+    pwd.addEventListener('keyup', () => {
+
+        pwdLength = pwd.value.length
+        console.log(pwdLength);
+
+        if (pwdLength == 1) {
+            show_hide.classList.remove('fa-eye')
+            show_hide.classList.add('fa-eye-low-vision')
+            pwd.type = 'password'
+        }
+    })
+
+    const show_hide = document.getElementById('show_hide')
+    show_hide.addEventListener('click', (e) => {
+        console.log(show_hide.classList);
+        if (pwd.type === 'password') {
+            pwd.type = 'text';
+            show_hide.classList.remove('fa-eye-low-vision')
+            show_hide.classList.add('fa-eye')
+        }
+        else {
+            pwd.type = 'password';
+            show_hide.classList.remove('fa-eye')
+            show_hide.classList.add('fa-eye-low-vision')
+        }
+
+
+    })
+
+
+    // fetch('http://localhost:4000/getloginUserData')
+</script>
+
+
+</html>

@@ -1,0 +1,86 @@
+.container-fluid {
+  width: 100%;
+  height: 100vh;
+  background-image: url("/image/deer-forest-vector-landscape-illustration-mountains-2124705-wallhere.com.jpg");
+  background-size: cover;
+  /* border: 2px solid blueviolet; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.label_block {
+  display: block;
+}
+.user_box_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 0vh; */
+}
+.formBox {
+  margin: auto;
+  width: 90%;
+  /* border: 2px solid blue; */
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.split_box {
+  width: 50%;
+}
+/* .body {
+  background-image: url("resource/OWL-ai-172023.png");
+
+  background-size: cover;
+} */
+.heading {
+  height: 22vh;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  /* text-align: center; */
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+.login_Box {
+  border: 1px solid #002d6f;
+  color: honeydew;
+  background-color: transparent;
+  width: 35%;
+  height: 85vh;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  transition: 0.4s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* box-shadow: 0px 0px 0px 0px black;   */
+}
+.input_block {
+  width: 90%;
+  background-color: transparent;
+  border: none !important;
+  border-bottom: 1px #002d6f solid !important;
+  font-weight: 500;
+  margin-left: 10px;
+  color: #002d6f;
+  outline: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+/* input[type="date"]:before {
+  content: attr(placeholder) !important;
+  color: #002d6f;
+} */
+
+/* //rgb(230 0 67); */
